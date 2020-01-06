@@ -2,5 +2,9 @@
 @import 'global';
 @import 'fonts';
 @import 'libs';
+@import 'mixins';
+
+@import 'header/header';
+@import 'main/main';
 
 @import 'media';

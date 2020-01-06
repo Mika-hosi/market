@@ -8,6 +8,12 @@ html {
     box-sizing: inherit;
 }
 
+a{
+    display: inline-block;
+    text-decoration: none;
+    color: $text-color;
+}
+
 ul,
 li {
     margin: 0;
@@ -15,6 +21,11 @@ li {
     list-style: none;
 }
 
+body {
+    font-family: 'Quicksand';
+    font-style: 15px;
+    color: $text-color;
+}
 .container {
     max-width: 1140px;
     padding: 0 15px;
@@ -23,4 +34,25 @@ li {
 
 .container-fluid {
     max-width: 100%;
+    margin: 0 auto;
+    padding: 30px;
+}
+
+@media (max-width: 720px){
+    .container-fluid {
+        padding: 15px;
+    }   
+}
+
+.button {
+    background-color: $button-color;
+    font-weight: 500;
+    padding: 12px 0;
+    text-align: center;
+    border-radius: $br;
+    border: none;
+    width: 100%;
+    a {
+        color: #fff;
+    }
 }
