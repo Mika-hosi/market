@@ -16,7 +16,8 @@ $(function(){
         dots: false,
         slidesToShow: 3,
         prevArrow: $('.feed__arrow-left'),
-        nextArrow: $('.feed__arrow-right')
+        nextArrow: $('.feed__arrow-right'),
+        variableWidth: true
     });
 
     let mixer = mixitup('.products__box');
