@@ -6,6 +6,21 @@
     left: 0; 
 }
 
+@mixin icon-social {
+    font-family: 'icomoon';
+    position: absolute;
+    top: 13px;
+    left: 18px;
+    color: #fff;
+}
+
+@mixin round-social {
+    position: relative;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+}
+
 @mixin section-title {
     background-color: #fff;
     padding: 40px 120px 40px 28px;

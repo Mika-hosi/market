@@ -87,6 +87,7 @@
         top: 0;
         right: 0;
         outline: none;
+        cursor: pointer;
     }
 }
 
@@ -96,6 +97,7 @@
     color: #fff;
     background-color: #2649cd;
     padding: 267px 0 234px 0;
+    position: relative;
     &__inner{
         &-title{
             font-size: 60px;
@@ -111,15 +113,20 @@
         }
         &-buttons {
             margin-top: 65px;
-            margin-bottom: 136px;
+            margin-bottom: 110px;
             a {
                 display: inline-block;
                 max-width: 188px;
                 background-color: transparent;
                 color: #fff;
                 border: 1px solid #fff;
+                transition: all .5s;
                 & + a {
                     margin-left: 20px;   
+                }
+                &:hover{
+                    background-color: #fff;
+                    color: $blue-color;
                 }
             }
         }    
@@ -131,7 +138,9 @@
         height: 137px;
         width: 100%;
         background-color: #fff;
-        box-shadow: 0px 5px 3px 3px rgba(0,0,0,0.04);
+        box-shadow: 0px 5px 15px 10px rgba(0,0,0,0.04),
+                    0px -50px 0px -30px rgba(255,255,255,0.5),
+                    0px -20px 0px -10px rgba(255,255,255,0.5);
         border-radius: 6px;
         
         &-input {
@@ -141,8 +150,7 @@
             height: 55px;
             background-color: transparent;
             padding: 15px 200px 15px 24px;
-            position: relative;
-            
+             
         }
         &-menu{
             width: 194px;
@@ -152,6 +160,7 @@
             border-radius: 3px;
             color: #fff;
             height: 55px;
+            cursor: pointer;
         }
     }
 }
