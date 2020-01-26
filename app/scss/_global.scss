@@ -61,4 +61,31 @@ body {
 .slick-slide {
     margin: 0 7px;
 }
+// footer to the bottom of page
+html,
+body {
+    min-height: 100%;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+.content{
+    flex: 1 0 auto;
+}
+.page-content{
+    background-color: $header-bg-color;
+}
+
+.footer{
+    flex: 0 0 
+    auto;
+}
+
+
+
+
 

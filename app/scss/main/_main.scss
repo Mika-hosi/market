@@ -116,15 +116,22 @@
             position: relative;
             &::before {
                 @include icon;
-                background-image: url(../../images/like.svg);    
+                background-image: url(../../images/like.svg);  
+                top: 2px;  
             }
         }
         &-purchases{
-            padding-left: 22px;
+            padding-left: 25px;
             position: relative;
+            color: $blue-color;
             &::before{
-                @include icon;
-                background-image: url(../../images/like.svg);
+                content: '\e93a';
+                font-family: 'icomoon';
+                color: $blue-color;
+                position: absolute;
+                font-size: 16px;
+                left: 0;
+                top: 0;
             }
         }
     
@@ -204,7 +211,6 @@
         border-radius: 6px;
         box-shadow: 0px 3px 15px 5px rgba(0,0,0,0.03);
         
-        
         &-img {
             background-color: rgb(209, 188, 188);
             height: 230px;
@@ -226,7 +232,7 @@
             
         }
         &-author {
-            padding-left: 22px;
+            padding-left: 23px;
             position: relative;
             &::before{
                 @include icon;
@@ -235,7 +241,8 @@
         }
 
         &-category {
-            padding-left: 22px;
+            margin-left: 10px;
+            padding-left: 23px;
             position: relative;
             &::before{
                 @include icon;
@@ -258,6 +265,39 @@
         }
     }
  }
+
+ .products__item-likes{
+    position: relative;
+    padding-left: 23px;
+    &::before{
+    @include icon;
+    background-image: url(../../images/like.svg);
+    top: 2px;
+    }
+}
+
+.products__item-purchases{
+    padding-left: 25px;
+    position: relative;
+    color: $blue-color;
+    &::before{
+        content: '\e93a';
+        font-family: 'icomoon';
+        color: $blue-color;
+        position: absolute;
+        font-size: 16px;
+        left: 0;
+        top: 0;
+    }
+}
+
+.products__item-price{
+    color: $blue-color;
+    background-color: rgba($blue-color, $alpha: .2);
+    font-weight: 500;
+    border-radius: 25px;
+    padding: 5px 15px;
+}
 
  //end products
 
@@ -310,9 +350,10 @@
         &-category {
             padding-left: 22px;
             position: relative;
+            margin-left: 10px;
             &::before{
                 @include icon;
-                background-image: url(../../images/wordpress-logo.svg);
+                background-image: url(../../images/wordpress.svg);
             }
         }
     
@@ -327,6 +368,36 @@
             justify-content: space-between;
             align-items: center;
             border-top: 1px solid $thick-bd;
+        }
+        &-price{
+            color: $blue-color;
+            background-color: rgba($blue-color, $alpha: .2);
+            font-weight: 500;
+            border-radius: 25px;
+            padding: 5px 15px;
+        }
+        &-likes{
+            position: relative;
+            padding-left: 23px;
+            &::before{
+            @include icon;
+            background-image: url(../../images/like.svg);
+            top: 2px;
+            }
+        }
+        &-purchases{
+            padding-left: 25px;
+            position: relative;
+            color: $blue-color;
+            &::before{
+            content: '\e93a';
+            font-family: 'icomoon';
+            color: $blue-color;
+            position: absolute;
+            font-size: 16px;
+            left: 0;
+            top: 0;
+    }
         }
     }
     &__title {
@@ -626,6 +697,46 @@
             padding: 30px 34px 30px 28px;
             
         }
+        &-date{
+            padding: 0 25px;
+            position: relative;
+            border-right: 1px solid $thick-bd;
+            &::before{
+            content: '\e902';
+            font-family: 'icomoon';
+            color: $blue-color;
+            position: absolute;
+            font-size: 16px;
+            left: 0;
+            top: 0;
+            }
+        }
+        &-comments{
+            position: relative;
+            padding-left: 25px;
+            
+            &::before{
+            content: '\e905';
+            font-family: 'icomoon';
+            position: absolute;
+            font-size: 16px;
+            left: 0;
+            top: 0;
+            }
+        }
+        &-views{
+            position: relative;
+            padding-left: 25px;
+            &::before{
+            content: '\e901';
+            font-family: 'icomoon';
+            position: absolute;
+            font-size: 16px;
+            left: 0;
+            top: 0;
+            }
+        }
+
     }
  }
  //end news
@@ -659,9 +770,6 @@
             margin-top: 26px;
         }
     }
-    &__item +.garanties__item {
-        
-    }
 }
 .item-line::before {
         content: '';
@@ -681,7 +789,6 @@
 .join{
     background-image: linear-gradient(to right, #631f93, #0e37d8);
     &__inner{
-        
         padding: 80px 0;
         text-align: center;
     }
@@ -747,7 +854,7 @@
             margin-bottom: 15px;
             position: relative;
             &::before{
-                content: "\f095";
+                content: "\e942";
                 font-family: 'icomoon';
                 position: absolute;
                 top: 0;
@@ -760,7 +867,7 @@
             margin-bottom: 15px;
             position: relative;
             &::before{
-                content: "\f003";
+                content: "\e90c";
                 font-family: 'icomoon';
                 position: absolute;
                 top: 0;
@@ -774,7 +881,7 @@
             margin-bottom: 15px;
             line-height: 25px;
             &::before{
-                content: "\f041";
+                content: "\e90d";
                 font-family: 'icomoon';
                 position: absolute;
                 top: 8px;
@@ -851,15 +958,16 @@
     @include round-social;
     background-color: #395799;
     &::before{
-        content: "\f09a";
+        content: "\ea90";
         @include icon-social;
+        left: 16px;
     }
 }
 .twitter{
     @include round-social;
     background-color: #19b2f5;
     &::before{
-        content: "\f099";
+        content: "\ea96";
         @include icon-social;
         left: 16px;
     }
@@ -868,7 +976,7 @@
     @include round-social;
     background-color: #f05b44;
     &::before{
-        content: "\f1a0";
+        content: "\ea88";
         @include icon-social;
         left: 16px;
     }
@@ -877,25 +985,27 @@
     @include round-social;
     background-color: #9c0c1c;
     &::before{
-        content: "\f041";
+        content: "\ead1";
         @include icon-social;
+        left: 16px;
     }
 }
 .linkedin{
     @include round-social;
     background-color: #0da6be;
     &::before{
-        content: "\f0e1";
+        content: "\eaca";
         @include icon-social;
+        left: 16px;
     }
 }
 .ball{
     @include round-social;
     background-color: #ea4c89;
     &::before{
-        content: "\e900";
+        content: "\e90e";
         @include icon-social;
-        left: 16px;
+        left: 15px;
     }
 }
  //end footer

@@ -15,6 +15,7 @@
         margin-right: 51px;
         width: 140px;
         font-size: 15px;
+        font-weight: 400;
     }
     &__menu {
         background-color: #fff;
@@ -63,6 +64,13 @@
     }
     &-panel {
         margin-right: 25px;
+        font-size: 20px;
+        a + a {
+            margin-left: 30px;
+        }
+        .icon-notifications{
+            font-size: 25px;
+        }
     }
 }
 
@@ -89,17 +97,71 @@
         right: 0;
         outline: none;
         cursor: pointer;
+        &::before{
+            content: '\e90b';
+            color: #fff;
+            position: absolute;
+            right: 23px;
+            font-size: 22px;
+            top: 11px;
+        }
     }
 }
 
 .hero {
     text-align: center;
-    height: 724px;
+    min-height: 724px;
     color: #fff;
     background-color: #2649cd;
-    padding: 267px 0 234px 0;
+    
     position: relative;
+    &.hero-search{
+        min-height: 282px;
+        background-image: linear-gradient(to right, #631f93, #0e37d8);
+        .hero__inner{
+            padding: 83px 0 23px 0;
+            .hero__descr{
+                font-size: 26px;
+                margin-bottom: 26px;
+            }
+            .hero__form{
+                position: relative;
+                max-width: 600px;
+                margin: 0 auto;
+                &-input {
+                    width: 100%;
+                    display: block;    
+                    border-radius: $br;
+                    height: 45px;
+                    border: 1px solid $thick-bd;
+                    outline: none;
+                    padding: 0 100px 0 25px;
+                    
+                    &:focus{
+                        border: 1px solid $button-color;
+                    }
+                }
+                button {
+                    height: 45px;
+                    width: 127px;
+                    padding: 5px 10px;
+                    position: absolute;
+                    color: #fff;
+                    outline: none;
+                    font-weight: 400;
+                    top: 0;
+                    right: 0px;
+                    cursor: pointer;
+                    
+                }
+                
+            }
+            
+        }
+    }
+
     &__inner{
+        padding: 267px 0 234px 0;
         &-title{
             font-size: 60px;
             margin-bottom: 34px;
