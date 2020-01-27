@@ -1,5 +1,3 @@
-
-
 //start hero-bottom
 .hero-bottom{
     background-color: #fff;
@@ -8,8 +6,24 @@
         min-height: 100px;
         display: flex;
         justify-content: space-between;
-        align-items: center;
-        
+        align-items: center;   
+    }
+    &__display{
+        padding: 9px 18px;
+        border: 1px solid $thick-bd;
+        button{
+            background-color: transparent;
+            border: none;
+            color: $tags-color;
+            cursor: pointer;
+            font-size: 20px;
+            outline: none;
+            &.active,
+            &:hover, 
+            &:active{
+                color: $blue-color;
+            }
+        } 
     }
     &__list{
         li {
@@ -53,7 +67,7 @@
 
 //start product-page
 .product-page{
-    padding: 100px 0 78px 0;
+    padding: 100px 0 48px 0;
     .container{
         display: flex;
         justify-content: space-between;
@@ -128,11 +142,74 @@
         }
     }
 } 
+.price-range{
+    form{
+        margin-top: 20px;
+    }
+    button{
+        color: #fff;
+        margin-top: 80px;
+    }
+    &__item{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.irs-min,
+.irs-max{
+    display: none;;
+}
+.irs--flat .irs-line{
+    height: 6px;
+    background-color: #efedf3;
+}
+.irs--flat .irs-bar{
+    height: 6px;
+    background-color: #7347c1;
+}
+.irs--flat .irs-handle>i:first-child {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    border: 4px solid $button-color;
+    background-color: #fff;
+    top: -3px;
+}
+
+.irs--flat .irs-handle.state_hover>i:first-child, 
+.irs--flat .irs-handle:hover>i:first-child {
+    background-color: #fff;
+}
+
+.irs--flat .irs-from, 
+.irs--flat .irs-to, 
+.irs--flat .irs-single{
+    top: 39px;
+    font-size: 16px;
+    font-family: 'Quicksand';
+    background-color: rgba($violet, $alpha: .2);
+    color: $violet;
+    width: 70px;
+    text-align: center;
+    margin-top: 17px;
+    padding: 8px;
+    font-weight: 500;
+    border-radius: 25px;
+}
+
+.irs--flat .irs-from:before, 
+.irs--flat .irs-to:before, 
+.irs--flat .irs-single:before{
+    display: none;
+}
 
 .product-page__content{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    
     
 }
 
@@ -214,6 +291,88 @@
     }
 }
 
+.pagination__list{
+    max-width: 360px;
+    margin-right: 0;
+    margin-left: auto;
+    margin-bottom: 100px;
+    li, span{
+        display: inline-block;
+        background-color: #fff;
+        width: 45px;
+        padding: 10px;
+        border-radius: 25px;
+        text-align: center;
+        font-weight: 500;
+        transition: all .5s;
 
+        &.active,
+        &:active,
+        &:hover {
+            background-color: $blue-color;
+            color: #fff;
+        }
+        &.pagination-arrow-left{
+            position: relative;
+            margin-right: 15px;
+            
+            &::before{
+                content: '\e909';
+                position: absolute;
+                font-family: 'icomoon';
+                font-size: 20px;
+                left: 13px;
+                top: 8px;
+                
+            }
+            &.active,
+            &:active,
+            &:hover {
+                background-color: $violet;
+                transition: all .1s;
+            }
+        }
+        &.pagination-arrow-right{
+            position: relative;
+            margin-left: 15px;
+            &::before{
+                content: '\e908';
+                position: absolute;
+                font-family: 'icomoon';
+                font-size: 20px;
+                left: 13px;
+                top: 8px;
+            }
+            &.active,
+            &:active,
+            &:hover {
+                background-color: $violet;
+                color: #fff;
+            }
+        }
+        
+    }
+    
+}
+
+.product-page__item{
+    transition: all .5s;
+    &.list{
+        width: 100%;
+        display: flex;
+        
+        .product-page__item-img{
+            width: 260px;
+        }
+    }
+}
+
+.icon-grid,
+.icon-list{
+    &.active{
+        color: $blue-color;
+    }
+}
 
 //end product-page
+

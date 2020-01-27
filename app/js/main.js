@@ -20,6 +20,25 @@ $(function(){
         variableWidth: true
     });
 
+    $(".js-range-slider").ionRangeSlider({
+        from: 30,
+        to: 300,
+        type: "double",
+        prefix: "$"
+    });
+
+    $('.icon-list').on('click', function(){
+        $('.product-page__item').addClass('list');
+        $('.icon-list').addClass('active');
+        $('.icon-grid').removeClass('active')
+    });
+
+    $('.icon-grid').on('click', function(){
+        $('.product-page__item').removeClass('list');
+        $('.icon-grid').addClass('active');
+        $('.icon-list').removeClass('active')
+    });
+
     let mixer = mixitup('.products__box');
 
    
