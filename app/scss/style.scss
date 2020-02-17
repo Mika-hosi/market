@@ -8,4 +8,32 @@
 @import 'main/main';
 @import 'new-items';
 
+
+.menu__btn{
+    display: none;
+    width: 40px;
+    transition: all .5s;
+    position: absolute;
+    div {
+        margin: 5px;  
+        height: 3px;
+        background-color: black;
+        border-radius: 6px;
+    }
+}
+
+.user__btn{
+    width: 60px;
+    height: 60px;
+    background: no-repeat center / cover;
+    display: none;
+}
+
+.user__box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
 @import 'media';
