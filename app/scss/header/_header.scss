@@ -181,11 +181,18 @@
 
 .hero {
     text-align: center;
-    min-height: 724px;
+    max-height: 724px;
     color: #fff;
     background-color: #2649cd;
     
     position: relative;
+    &.single{
+        max-height: 184px;
+        background-image: linear-gradient(to right, #631f93, #0e37d8);
+        .hero__inner{
+            padding: 58px 0 52px 0;
+        }
+    }
     &.hero-search{
         min-height: 282px;
         background-image: linear-gradient(to right, #631f93, #0e37d8);
